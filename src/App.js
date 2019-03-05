@@ -1,26 +1,34 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import Accueil from "./components/Accueil";
+import Apropos from "./components/Apropos";
+import Contact from "./components/Contact";
+import "./App.css";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router>
+        <div className="App">
+          <header className="App-header">
+            <ul> 
+              <li><NavLink exact to="/" className="App-link">Accueil</NavLink></li> 
+              <li><NavLink to="/Apropos" className="App-link">A propos</NavLink></li> 
+              <li><NavLink to="/Contact" className="App-link">Contact</NavLink></li> 
+            </ul> 
+          </header>
+
+          <div className="content">
+            <Route exact path="/" component={Accueil}/>
+            <Route path="/Apropos" component={Apropos}/>
+            <Route path="/Contact" component={Contact}/>
+          </div>
+
+          <footer className="App-footer">
+            <p>Copyright &copy; Miranto, Lee 2019</p>
+          </footer>
+        </div>        
+      </Router>
     );
   }
 }
