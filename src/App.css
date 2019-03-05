@@ -43,7 +43,7 @@ ul li{
 
 .App-content {
  padding-top: 10px;
- background-color: white;
+ background-color: rgb(255, 255, 255);
  height: 500px;
 }
 
