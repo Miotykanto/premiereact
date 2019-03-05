@@ -12,14 +12,15 @@ class App extends Component {
         <div className="App">
           <header className="App-header">
             <ul> 
-              <li><NavLink exact to="/" className="App-link">Accueil</NavLink></li> 
+              <li><NavLink to="/Accueil" className="App-link">Accueil</NavLink></li> 
               <li><NavLink to="/Apropos" className="App-link">A propos</NavLink></li> 
               <li><NavLink to="/Contact" className="App-link">Contact</NavLink></li> 
             </ul> 
           </header>
 
-          <div className="content">
+          <div className="App-content">
             <Route exact path="/" component={Accueil}/>
+            <Route path="/Accueil" component={Accueil}/>
             <Route path="/Apropos" component={Apropos}/>
             <Route path="/Contact" component={Contact}/>
           </div>

@@ -41,6 +41,11 @@ ul li{
   color: #61dafb;
 }
 
+.App-content {
+ padding-top: 10px;
+ background-color: rgb(255, 255, 255);
+ height: 500px;
+}
 
 .App-footer {
   background-color: #060d0f;
